@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    width: 100dvw;
+    box-sizing: border-box;
+    padding-right: 5dvw;
+}
+
+.innerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* Two rows */
+    grid-template-areas:
+        "topLeft right"
+        "bottomLeft right";
+    /* Adjusted grid areas */
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Adjust the animation for the 'right' part */
+.right.hidden {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.right.visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    /* Customize as needed */
+    grid-area: right;
+    /* Ensure it spans two rows */
+}
+
+/* Delay for bottomLeft */
+.bottomLeft.hidden {
+    transition-delay: 0.3s;
+}

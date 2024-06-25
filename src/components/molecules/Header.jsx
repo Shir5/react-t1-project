@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderText from '../atoms/HeaderText.jsx';
 import Logo from '../atoms/Logo.jsx';
-import {header} from '@/styles/Header.module.css';
+import {header} from '@/styles/moleculesStyles/Header.module.css';
 function Header() {
     return (
         <div className={header}>
