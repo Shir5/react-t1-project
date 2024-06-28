@@ -22,31 +22,39 @@
 
 .hidden {
     opacity: 0;
-    transform: translateX(-100%);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .visible {
     opacity: 1;
-    transform: translateX(0);
 }
 
-/* Adjust the animation for the 'right' part */
-.right.hidden {
-    opacity: 0;
+.topLeft {
+    grid-area: topLeft;
+    transform: translateX(-100%);
+}
+
+.bottomLeft {
+    grid-area: bottomLeft;
+    transform: translateX(-100%);
+}
+
+.right {
+    grid-area: right;
     transform: translateX(100%);
 }
 
-.right.visible {
-    opacity: 1;
+.topLeft.visible {
     transform: translateX(0);
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-    /* Customize as needed */
-    grid-area: right;
-    /* Ensure it spans two rows */
+    transition-delay: 0s;
 }
 
-/* Delay for bottomLeft */
-.bottomLeft.hidden {
-    transition-delay: 0.3s;
+.bottomLeft.visible {
+    transform: translateX(0);
+    transition-delay: 0.5s;
+}
+
+.right.visible {
+    transform: translateX(0);
+    transition-delay: 0s;
 }

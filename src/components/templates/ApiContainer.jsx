@@ -1,10 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import TopLeftDescription from '../organisms/TopLeftDescription.jsx';
-import BottomLeftDescription from '../organisms/BottomLeftDescription.jsx';
-import RightDescription from '../organisms/RightDescription.jsx';
 import styles from '@/styles/templatesStyles/ApiContainer.module.css';
 
-function ApiContainer() {
+function ApiContainer({ topLeftContent, bottomLeftContent, rightContent }) {
     const topLeftRef = useRef(null);
     const bottomLeftRef = useRef(null);
     const rightRef = useRef(null);
@@ -14,7 +11,8 @@ function ApiContainer() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add(styles.visible);
-                    observer.unobserve(entry.target);
+                } else {
+                    entry.target.classList.remove(styles.visible);
                 }
             });
         }, {
@@ -36,13 +34,13 @@ function ApiContainer() {
         <div className={styles.container}>
             <div className={styles.innerContainer}>
                 <div className={`${styles.topLeft} ${styles.hidden}`} ref={topLeftRef}>
-                    <TopLeftDescription />
+                    {topLeftContent}
                 </div>
                 <div className={`${styles.bottomLeft} ${styles.hidden}`} ref={bottomLeftRef}>
-                    <BottomLeftDescription />
+                    {bottomLeftContent}
                 </div>
                 <div className={`${styles.right} ${styles.hidden}`} ref={rightRef}>
-                    <RightDescription />
+                    {rightContent}
                 </div>
             </div>
         </div>

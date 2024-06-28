@@ -1,8 +1,68 @@
-
-.container{
+.container {
     position: relative;
     display: block;
     width: 25dvw;
-    height: 25dvh;
+    max-height: 25dvh;
     background-color: blue;
+    box-sizing: border-box;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    /* Adjust color as needed */
+    margin: 10px 10px 0 10px;
+}
+
+.paramsContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: 20dvh;
+    overflow-x: hidden;
+    padding-left: 3em;
+}
+
+.descriptionHeader {
+    color: black;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    margin: 0;
+}
+
+.paramsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-top: 0.5em;
+}
+
+.paramRow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.paramInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.paramName {
+    font-weight: bold;
+    flex: 1;
+}
+
+.paramDescription {
+    flex: 2;
+    margin-left: 10px;
+}
+
+.paramInput {
+    padding: 5px;
+    font-size: 14px;
+    width: 80%;
+    margin-top: 5px;
 }

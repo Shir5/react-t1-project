@@ -6,3 +6,23 @@
     height: 25dvh;
     background-color: blueviolet;
 }
+
+.descriptionHeader{
+    color: black;
+    padding-left: 1.5em;
+    padding-top: 1em;
+    margin: 0;
+}
+
+.descriptionBody{
+    color: black;
+    padding-left: 3em;
+    padding-top: 1em;
+    margin: 0;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #ccc; /* Adjust color as needed */
+    margin: 10px 10px 0 10px; 
+}
