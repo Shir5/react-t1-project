@@ -1,0 +1,18 @@
+.buttonContainer {
+    width: 100%;
+}
+
+.apiButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.apiButton:hover {
+    background-color: #0056b3;
+}

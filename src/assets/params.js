@@ -1,11 +1,11 @@
 export const params1 = [
-    { name: 'Param1', description: 'Description1' },
-    { name: 'Param2', description: 'Description2' },
 ];
 
 export const params2 = [
-    { name: 'Param3', description: 'Description3' },
-    { name: 'Param4', description: 'Description4' },
+    { name: 'Last name', description: 'Description3' },
+    { name: 'First name', description: 'Description4' },
+    { name: 'Email', description: 'Description3' },
+    { name: 'Role', description: 'Description4' },
     
 ];
 
