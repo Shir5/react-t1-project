@@ -15,13 +15,12 @@
     grid-template-areas:
         "topLeft right"
         "bottomLeft right"
-        "rightButton right"; /* Adjusted grid areas */
-    border: 1px solid #ccc;
+        "button right"; /* Adjusted grid areas */
 }
 
 .hidden {
     opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.4s ease-in-out, opacity 0.3s ease-out;
 }
 
 .visible {
@@ -41,16 +40,18 @@
 .right {
     grid-area: right;
     transform: translateX(100%);
+    word-wrap: break-word; /* Ensure words wrap inside the right container */
+    word-break: break-all; /* Break long words if necessary */
 }
 
 .rightButton {
-    grid-area: rightButton;
+    grid-area: button;
     transform: translateX(-100%);
 }
 
 .topLeft.visible {
     transform: translateX(0);
-    transition-delay: 0s;
+    transition-delay: 0.2s;
 }
 
 .bottomLeft.visible {
@@ -60,10 +61,48 @@
 
 .right.visible {
     transform: translateX(0);
-    transition-delay: 0s;
+    transition-delay: 0.3s;
 }
 
 .rightButton.visible {
     transform: translateX(0);
     transition-delay: 1s;
+}
+
+/* Media query for mobile phones */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding-right: 0;
+        padding: 10px;
+    }
+
+    .innerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+    }
+
+    .topLeft,
+    .bottomLeft,
+    .right,
+    .rightButton {
+        transform: translateX(0);
+        transition-delay: 0s;
+    }
+
+    .topLeft,
+    .bottomLeft,
+    .right,
+    .rightButton.visible {
+        transform: none;
+    }
+
+    .topLeft,
+    .bottomLeft,
+    .right,
+    .rightButton {
+        opacity: 1;
+    }
 }

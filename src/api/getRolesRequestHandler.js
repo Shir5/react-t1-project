@@ -1,6 +1,5 @@
-export const getRolesRequestHandler = async (params) => {
-    const queryString = new URLSearchParams(params).toString();
-    const url = `http://localhost:3000/proxy/api/get-roles?${queryString}`;
+export const getRolesRequestHandler = async () => {
+    const url = `http://193.19.100.32:7000/api/get-roles`;
 
     try {
         const response = await fetch(url, {

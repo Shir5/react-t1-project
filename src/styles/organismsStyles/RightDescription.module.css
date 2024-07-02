@@ -1,4 +1,3 @@
-/* RightDescription.module.css */
 
 .container {
     display: flex;
@@ -7,19 +6,30 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    min-width: 25dvw;
     box-sizing: border-box;
     border: 1px solid #ccc;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    overflow: hidden;
 }
 
 .responseBox {
     margin: 0;
-    background-color: rgb(6, 87, 26);
+    background-color: black;
     padding-left:2em;
-    padding-top:2em;
+    padding-right: 1em;
+    padding-top:5em;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    white-space: pre-wrap; /* Ensure long text wraps */
-    word-wrap: break-word; /* Ensure long words break */
+}
+
+.eyeIcon {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.eyeIcon:hover {
+    transform: scale(1.2); /* Scale the icon to 1.2 times its original size on hover */
 }

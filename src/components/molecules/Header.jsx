@@ -1,15 +1,16 @@
+// src/components/molecules/Header.jsx
 import React from 'react';
 import HeaderText from '../atoms/HeaderText.jsx';
 import Logo from '../atoms/Logo.jsx';
-import {header} from '@/styles/moleculesStyles/Header.module.css';
+import styles from '@/styles/moleculesStyles/Header.module.css'; // Adjust the path based on your project structure
+
 function Header() {
     return (
-        <div className={header}>
+        <div className={styles.header}>
             <Logo />
-            <HeaderText text="Task 4" level={1} className="headerSecondary" />
-            <HeaderText text="T1 Camp" level={1} className="headerTertiary" />
+            <HeaderText text="Task 4" level={1} className={styles.headerSecondary} />
+            <HeaderText text="T1 Camp" level={1} className={styles.headerTertiary} />
         </div>
-
     );
 }
 

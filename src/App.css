@@ -1,7 +1,106 @@
 #root {
-  min-width: 1280px;
-  margin: 0 auto;
-  height: 100vh; 
-  width: 100vw;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-section {
+    scroll-snap-align: start;
+    /* Snap each section to the start of the viewport */
+    scroll-margin-top: 1px;
+    /* Adjust as needed to ensure precise snapping */
+}
+
+/* Adjust scrolling behavior for older browsers */
+@supports (-webkit-overflow-scrolling: touch) {
+    .scroll-container {
+        -webkit-overflow-scrolling: touch;
+        overflow-y: scroll;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 15vh;
+    right: 30px;
+    height: 20vh;
+    width: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateX(-20px);
+}
+
+/* Media query for mobile phones */
+@media (max-width: 768px) {
+    #root {
+        width: 100vw;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #333; /* Add a background color to make it stand out */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    li {
+        margin: 10px;
+        transform: translateX(0); /* Reset transform */
+    }
+
+    li:hover {
+        transform: translateY(-5px); /* Slightly lift the item on hover */
+    }
+
+    .scroll-container {
+        scroll-snap-type: none; /* Disable snap scrolling */
+        overflow-x: hidden;
+        overflow-y: auto;
+        scroll-behavior: auto; /* Cancel smooth scroll */
+    }
+
+    .scroll-section {
+        scroll-snap-align: none; /* Disable snap alignment */
+    }
+}
