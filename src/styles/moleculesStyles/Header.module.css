@@ -6,14 +6,14 @@
     font-size: 12px;
     width: 90%;
     margin: 0 auto;
-    color: white; /* Ensure text color is set */
+    color: black;
 }
 
 
 .textContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Align text to the right for desktop */
+    align-items: flex-end;
 }
 
 @media (max-width: 768px) {
@@ -24,7 +24,7 @@
     }
 
     .textContainer {
-        align-items: center; /* Center text for mobile */
-        margin-top: 20px; /* Add some space between logo and text */
+        align-items: center; 
+        margin-top: 20px;
     }
 }

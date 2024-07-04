@@ -5,7 +5,7 @@
     width: 100%;
     min-width: 25dvw;
     height: 25dvh;
-    background-color: black;
+    background-color: #96C9F4;
 }
 
 .descriptionHeader{
@@ -13,17 +13,20 @@
     padding-left: 1.5em;
     padding-top: 1em;
     margin: 0;
+    color: #000;
+
 }
 
 .descriptionBody{
-    color: white;
     padding-left: 3em;
     padding-top: 1em;
     margin: 0;
-}
+    color: #000;
+    font-size: large;
+    padding-right: 1em;}
 
 .separator {
     border: none;
-    border-top: 1px solid #ccc; /* Adjust color as needed */
+    border-top: 1px solid #304463;
     margin: 10px 10px 0 10px; 
 }

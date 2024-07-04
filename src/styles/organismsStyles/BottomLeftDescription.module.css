@@ -4,13 +4,16 @@
     width: 100%;
     min-width: 25dvw;
     min-height: 40dvh;
-    background-color: black;
+    background-color: #96C9F4;
     box-sizing: border-box;
+    color: #000;
+    font-size: 18px;
+
 }
 
 .separator {
     border: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #304463;
     margin: 10px 10px 0 10px;
 }
 
@@ -20,7 +23,7 @@
     max-height: 40dvh;
     overflow-x: hidden;
     padding-left: 3em;
-    background-color: black;
+    background-color: #96C9F4;
 
 }
 
@@ -68,12 +71,18 @@
     font-size: 14px;
     width: 80%;
     margin-top: 5px;
+    color: white;
+    background-color: #2D2D2D;
 }
-
+.paramInput:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2D2D2D inset !important; 
+    -webkit-text-fill-color: white !important; 
+}
 .eyeIcon {
     cursor: pointer;
-    margin-left: -30px; /* Adjust based on your design */
+    margin-left: -30px; 
     display: flex;
     align-items: center;
     margin-top: 5px;
+    color: white;
 }

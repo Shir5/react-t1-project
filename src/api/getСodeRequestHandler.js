@@ -14,18 +14,12 @@ export const getCodeRequestHandler = async (parameters) => {
         if (!response.ok) {
             throw new Error('Network response was not ok: ' + response.statusText);
         }
-
         const data = await response.json();
         console.log('Get Code request successful:', data);
 
-        // Extract email and token from response
-        const { email } = parameters; // Extract email from parameters
-        console.log('Encoded token:', email, ':', data);
-    
-        // Encode token with email
-        const encodedToken = btoa(email+":"+data);
-        console.log('Encoded token:', encodedToken);
-
+        const { email } = parameters;
+        const encodedToken = btoa(email + ":" + data);
+        
         return encodedToken;
     } catch (error) {
         console.error('Error during Get Code request:', error);

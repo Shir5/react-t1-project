@@ -2,7 +2,7 @@
 import React from 'react';
 import HeaderText from '../atoms/HeaderText.jsx';
 import Logo from '../atoms/Logo.jsx';
-import styles from '@/styles/moleculesStyles/Header.module.css'; // Adjust the path based on your project structure
+import styles from '@/styles/moleculesStyles/Header.module.css';
 
 function Header() {
     return (

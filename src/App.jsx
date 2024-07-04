@@ -6,7 +6,7 @@ import Nav from './components/molecules/Nav.jsx'; // Adjust the path based on yo
 import ApiContainer from './components/templates/ApiContainer.jsx';
 import TopLeftDescription from './components/organisms/TopLeftDescription.jsx';
 import RightDescription from './components/organisms/RightDescription.jsx';
-import { params1, params2, params3, params5 } from '@/assets/params';
+import { params1, params2, params3, params4 } from '@/assets/params';
 import { getRolesRequestHandler } from './api/getRolesRequestHandler';
 import { signUpRequestHandler } from './api/signUpRequestHandler.js';
 import { getCodeRequestHandler } from './api/getСodeRequestHandler.js';
@@ -21,7 +21,7 @@ function App() {
 
                     <Header />
                     <ApiContainer
-                        topLeftContent={<TopLeftDescription text="Hello from Component 1" />}
+                        topLeftContent={<TopLeftDescription headerText="Get Roles" text="Получить перечень ролей - направлений подготовки лагеря" />}
                         bottomLeftContent={{ parameters: params1 }}
                         rightContent={<RightDescription />}
                         requestHandler={getRolesRequestHandler}
@@ -29,7 +29,7 @@ function App() {
                 </div>
                 <div id="section2" className="scroll-section">
                     <ApiContainer
-                        topLeftContent={<TopLeftDescription text="Hello from Component 2" />}
+                        topLeftContent={<TopLeftDescription headerText="Sign Up" text="Записать свои данные в таблицу кандидатов" />}
                         bottomLeftContent={{ parameters: params2 }}
                         rightContent={<RightDescription />}
                         requestHandler={signUpRequestHandler}
@@ -37,7 +37,7 @@ function App() {
                 </div>
                 <div id="section3" className="scroll-section">
                     <ApiContainer
-                        topLeftContent={<TopLeftDescription text="Hello from Component 3" />}
+                        topLeftContent={<TopLeftDescription headerText="Get Code" text="Получить код из исходной строки 'email:code', в формате base64" />}
                         bottomLeftContent={{ parameters: params3 }}
                         rightContent={<RightDescription />}
                         requestHandler={getCodeRequestHandler}
@@ -45,8 +45,8 @@ function App() {
                 </div>
                 <div id="section4" className="scroll-section">
                     <ApiContainer
-                        topLeftContent={<TopLeftDescription text="Hello from Component 4" />}
-                        bottomLeftContent={{ parameters: params5 }}
+                        topLeftContent={<TopLeftDescription headerText="Set Status" text="Установить статус записи в таблицу кандидатов" />}
+                        bottomLeftContent={{ parameters: params4 }}
                         rightContent={<RightDescription />}
                         requestHandler={setStatusRequestHandler}
                     />

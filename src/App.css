@@ -3,6 +3,7 @@
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    font-weight: 400;
 }
 
 .scroll-container {
@@ -17,12 +18,9 @@
 
 .scroll-section {
     scroll-snap-align: start;
-    /* Snap each section to the start of the viewport */
     scroll-margin-top: 1px;
-    /* Adjust as needed to ensure precise snapping */
 }
 
-/* Adjust scrolling behavior for older browsers */
 @supports (-webkit-overflow-scrolling: touch) {
     .scroll-container {
         -webkit-overflow-scrolling: touch;
@@ -36,15 +34,18 @@ nav {
     right: 30px;
     height: 20vh;
     width: 150px;
-    color: white;
+    color: black;
+    font-size: large;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    z-index: 1000;
+    z-index: 1000;;
 }
 
 nav ul {
+    background-color: #FAFFAF;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -60,7 +61,6 @@ li:hover {
     transform: translateX(-20px);
 }
 
-/* Media query for mobile phones */
 @media (max-width: 768px) {
     #root {
         width: 100vw;
@@ -74,7 +74,7 @@ li:hover {
         height: auto;
         flex-direction: row;
         justify-content: space-around;
-        background-color: #333; /* Add a background color to make it stand out */
+        background-color: #333; 
     }
 
     nav ul {
@@ -86,21 +86,21 @@ li:hover {
 
     li {
         margin: 10px;
-        transform: translateX(0); /* Reset transform */
+        transform: translateX(0);
     }
 
     li:hover {
-        transform: translateY(-5px); /* Slightly lift the item on hover */
+        transform: translateY(-5px);
     }
 
     .scroll-container {
-        scroll-snap-type: none; /* Disable snap scrolling */
+        scroll-snap-type: none;
         overflow-x: hidden;
         overflow-y: auto;
-        scroll-behavior: auto; /* Cancel smooth scroll */
+        scroll-behavior: auto;
     }
 
     .scroll-section {
-        scroll-snap-align: none; /* Disable snap alignment */
+        scroll-snap-align: none;
     }
 }
